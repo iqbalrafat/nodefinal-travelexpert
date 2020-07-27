@@ -3,7 +3,7 @@ const express    = require ('express');
 const app        = express();
 const path       = require ('path');
 const ejs        = require('ejs');
-const cors       = require ('cors');
+// const cors       = require ('cors');
 const dotenv     = require ('dotenv').config();
 const ejsLayout  = require('express-ejs-layouts');
 const bodyParser = require('body-parser');
@@ -25,7 +25,7 @@ mongoose.connect(mongoDB,
   .catch(()=>console.log("error in connecting database"));
 
 //set up cross browser access
-app.use(cors());
+// app.use(cors());
 //to display to common task in different ejs file
 app.use(ejsLayout);
 
